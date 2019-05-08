@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types';
 import WizardFormFirstPage from './WizardFormFirstPage'
 import WizardFormSecondPage from './WizardFormSecondPage'
 import WizardFormThirdPage from './WizardFormThirdPage'
@@ -14,8 +13,8 @@ class WizardForm extends Component {
     }
 	}
 	
-	onSubmit = () => {
-		console.log('Submit called...')
+	onSubmit = (formData) => {
+		console.log('Submit called...', formData);
 	}
 
   nextPage() {
@@ -27,19 +26,15 @@ class WizardForm extends Component {
 	}
 
   render() {
-    const { onSubmit } = this.props
     const { page } = this.state
     return (<div>
+				<h4 style={{ textAlign:'center', color:'darkred', paddingTop:'20px' }}> New Account </h4>
         {page === 1 && <WizardFormFirstPage onSubmit={this.nextPage}/>}
         {page === 2 && <WizardFormSecondPage previousPage={this.previousPage} onSubmit={this.nextPage}/>}
         {page === 3 && <WizardFormThirdPage previousPage={this.previousPage} onSubmit={this.onSubmit}/>}
       </div>
     )
   }
-}
-
-WizardForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired
 }
 
 export default WizardForm

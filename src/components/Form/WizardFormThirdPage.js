@@ -3,16 +3,6 @@ import { Field, reduxForm } from 'redux-form'
 import validate from './validate'
 import renderField from './renderField'
 
-// const renderCitySelector = ({ input, meta: { touched, error } }) => (
-// 	<div>
-// 		<select {...input}>
-// 			<option value="">Select a City...</option>
-// 			{cities.map(val => <option value={val} key={val}>{val}</option>)}
-// 		</select>
-// 		{touched && error && <span style={{ color: 'red' }}> &nbsp;&nbsp;{error}</span>}
-// 	</div>
-// )
-
 const Styles = {
 	wizard3: {
 		marginRight: 'auto',
@@ -25,6 +15,27 @@ const Styles = {
 		border: '1px solid lightgrey',
 		borderRadius: '20px',
 		boxShadow: 'rgba(50, 50, 93, 0.1) 0px 15px 35px, rgba(0, 0, 0, 0.07) 0px 5px 15px'
+	},
+	numberWrapper: {
+		color: 'black',
+		float: 'right',
+		fontSize: '15px',
+		backgroundColor: 'gainsboro',
+		height: '40px',
+		width: '40px',
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+		borderRadius: '30px',
+	},
+	titleWrapper: {
+		display: 'flex',
+		alignItems: 'center',
+		width: '100%',
+		justifyContent: 'space-between',
+	},
+	submitButton: {
+		width: '88.3px',
 	},
 }
 
@@ -49,8 +60,8 @@ const WizardFormThirdPage = (props) => {
 	return (
 		<div style={Styles.wizard3}>
 			<form onSubmit={handleSubmit}>
-				<div>
-					<h4 className="w3-text-blue">Personal Details</h4>
+				<div style={{ display: 'flex' }}>
+					<h5 style={Styles.titleWrapper} className="w3-text-blue">Personal Details<span style={Styles.numberWrapper}>3/3</span></h5>
 				</div>
 				<div>
 					<div>
@@ -74,10 +85,9 @@ const WizardFormThirdPage = (props) => {
 						placeholder={'Select city'}
 					/>
 				</div>
-				<br />
 				<div>
 					<button type="button" className="btn btn-secondary" onClick={previousPage}>Previous</button>&nbsp;&nbsp;&nbsp;
-        <button type="submit" className="btn btn-primary" disabled={pristine || submitting}>Submit</button>
+       		<button style={Styles.submitButton} type="submit" className="btn btn-primary" disabled={pristine || submitting}>Submit</button>
 				</div>
 			</form>
 		</div>
