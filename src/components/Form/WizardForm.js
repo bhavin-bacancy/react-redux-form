@@ -6,9 +6,9 @@ import WizardDisplayForm from './WizardDisplayForm'
 
 const Styles = {
 	headingWrapper: {
-		textAlign:'center',
-		color:'darkred',
-		paddingTop:'20px',
+		textAlign: 'center',
+		color: 'darkred',
+		paddingTop: '20px',
 	},
 }
 class WizardForm extends Component {

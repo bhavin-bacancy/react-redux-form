@@ -16,23 +16,23 @@ const Styles = {
 		borderRadius: '20px',
 		boxShadow: 'rgba(50, 50, 93, 0.1) 0px 15px 35px, rgba(0, 0, 0, 0.07) 0px 5px 15px'
 	},
-	numberWrapper : {
-		color : 'black',
+	numberWrapper: {
+		color: 'black',
 		float: 'right',
 		fontSize: '15px',
 		backgroundColor: 'gainsboro',
 		height: '40px',
 		width: '40px',
-		display:'flex',
+		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
 		borderRadius: '30px',
 	},
-	titleWrapper : {
+	titleWrapper: {
 		display: 'flex',
 		alignItems: 'center',
 		width: '100%',
-		justifyContent: 'space-between', 
+		justifyContent: 'space-between',
 	},
 	nextButton: {
 		width: '88.3px',
@@ -43,7 +43,7 @@ const WizardFormFirstPage = (props) => {
 	const { handleSubmit } = props
 	return (
 		<div style={Styles.wizard1}>
-			<div style={{display:'flex'}}>
+			<div style={{ display: 'flex' }}>
 				<h5 style={Styles.titleWrapper} className="w3-text-blue">Personal Details<span style={Styles.numberWrapper}>1/3</span></h5>
 			</div>
 			<form onSubmit={handleSubmit}>

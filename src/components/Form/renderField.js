@@ -50,27 +50,27 @@ const renderField = ({
 			}
 			{
 				(type === 'select')
-					&& <div className="form-group">
-						{
-							label
-								&& <div>
-									<label>{label}</label>
-								</div>
-						}
-						<Select
-							name={name}
-							value={selected}
-							options={dropdownArray}
-							{...input}
-							{...(onChange) && { onChange: () => input.onChange(input.value) }}
-							// eslint-disable-next-line no-unused-expressions
-							onBlur={(event) => { _blur ? _blur(input.value.value) : input.onBlur(input.value); }}
-							placeholder={placeholder}
-						/>
-						{touched && error && <span style={{ color: 'red' }}>{error}</span>}
-					</div>
+				&& <div className="form-group">
+					{
+						label
+						&& <div>
+							<label>{label}</label>
+						</div>
+					}
+					<Select
+						name={name}
+						value={selected}
+						options={dropdownArray}
+						{...input}
+						{...(onChange) && { onChange: () => input.onChange(input.value) }}
+						// eslint-disable-next-line no-unused-expressions
+						onBlur={(event) => { _blur ? _blur(input.value.value) : input.onBlur(input.value); }}
+						placeholder={placeholder}
+					/>
+					{touched && error && <span style={{ color: 'red' }}>{error}</span>}
+				</div>
 			}
 		</>
-);
+	);
 
 export default renderField;

@@ -26,16 +26,16 @@ const Styles = {
 		backgroundColor: 'gainsboro',
 		height: '40px',
 		width: '40px',
-		display:'flex',
+		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
 		borderRadius: '30px',
 	},
-	titleWrapper : {
+	titleWrapper: {
 		display: 'flex',
 		alignItems: 'center',
 		width: '100%',
-		justifyContent: 'space-between', 
+		justifyContent: 'space-between',
 	},
 	nextButton: {
 		width: '88.3px',
@@ -46,7 +46,7 @@ const WizardFormSecondPage = (props) => {
 	const { handleSubmit, previousPage } = props
 	return (
 		<div style={Styles.wizard2}>
-			<div style={{display:'flex'}}>
+			<div style={{ display: 'flex' }}>
 				<h5 style={Styles.titleWrapper} className="w3-text-blue">Personal Details<span style={Styles.numberWrapper}>2/3</span></h5>
 			</div>
 			<form onSubmit={handleSubmit}>

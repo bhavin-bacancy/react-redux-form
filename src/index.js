@@ -7,6 +7,6 @@ import WizardForm from './components/Form/WizardForm';
 const store = configureStore({});
 
 ReactDOM.render(
-<Provider store={store}>
-	<WizardForm />
-</Provider>, document.getElementById('root'));
+	<Provider store={store}>
+		<WizardForm />
+	</Provider>, document.getElementById('root'));

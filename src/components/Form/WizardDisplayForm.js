@@ -21,7 +21,7 @@ class WizardDispalyForm extends Component {
 		return (
 			<div style={Styles.wizard4}>
 				<div>
-					<h4 className="w3-text-blue w3-center"> Congratulations, {formData.firstName} {formData.lastName} <p>Your account has been registered...!!! </p></h4>
+					<h4 className="w3-center"><p className="w3-text-red">Congratulations, {formData.firstName}</p><p className="w3-text-blue">Your account has been registered...!!! </p></h4>
 					<h6><b>Email ID : </b> {formData.email}</h6>
 					<h6><b>Gender : </b> {formData.gender}</h6>
 					<h6><b>Address : </b> {formData.address}</h6>
