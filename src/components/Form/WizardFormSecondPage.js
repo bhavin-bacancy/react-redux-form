@@ -60,8 +60,8 @@ const WizardFormSecondPage = (props) => {
 				<div>
 					<label>Gender</label>
 					<div>
-						<Field name="gender" component="input" type="radio" value="male" /> Male &nbsp;&nbsp;
-					<Field name="gender" component="input" type="radio" value="female" /> Female
+						<Field name="gender" component="input" type="radio" value="Male" /> Male &nbsp;&nbsp;
+					<Field name="gender" component="input" type="radio" value="Female" /> Female
 					<Field name="gender" component={renderError} />
 					</div>
 				</div>
